@@ -1,42 +1,66 @@
-html, body, * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    background-color: black;
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+:root {
+    --background: black;
+    --text: pink;
+    --border: pink;
 }
 
-img {
-    width: 25vw;
-}
-
-hr {
-    border: none;
-    height: 1px;
-    background-color: white;
-    margin: 10px auto 10px auto;
-    width: 200px;
-}
-
-.wrapper {
-    height: 100vh;
-    width: 100vw;
+body {
+    background-color: var(--background);
     display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0px;
+    overflow: hidden;
+}
+
+h1, h2, h3, a, p, span {
+    font-family: 'Tilt Neon', cursive;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--text);
+    margin: 0px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+i {
+    color: var(--text);
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+}
+
+nav > .nsection {
+    padding: 1.5rem 2rem;
+    display: flex;
+    gap: 1rem;
     align-items: center;
     justify-content: center;
+    border-left: 1px solid var(--border);
 }
 
-.main {
-    height: 20vh;
-    width: 50vw;
-    justify-content: center;
-    text-align: center;
+.logo {
+    justify-content: flex-start !important;
 }
 
-@media only screen and (max-width: 900px) {
-    img {
-        opacity: 0;
-        width: 0px;
-    }
-  }
+.logo a {
+    font-size: 3rem;
+}
+
+.logo, .link {
+    flex-basis: calc(100% / 3.5);
+}
+
+.svcs, .cntc {
+    flex-grow: 1;
+}
